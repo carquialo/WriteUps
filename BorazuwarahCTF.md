@@ -13,7 +13,7 @@ bash auto_deploy.sh borazuwarahctf.tar
 ```
 
 
-![Img](./images/Pasted%20image%2020241106191136.png)
+![Img](1.png)
 
 
 
@@ -48,12 +48,12 @@ nmap -p- -sS -sV -sC --min-rate 5000 -n -vvv -Pn 172.17.0.2
 `-oG` ⮞ exportamos el resultado en formato grepeable (para extraer mejor los datos con herramientas como grep, awk)
 
 
-![Img](Pasted%20image%2020240917192325.png)
+![Img](2.png)
 
 
 Nos vamos a la página web y nos sale :
 
-![Img](Pasted%20image%2020240917193213.png)
+![Img](3.png)
 
 Nos descargamos la imagen y veremos si tiene algún archivo oculto. Haremos el siguiente comando:
 
@@ -61,7 +61,7 @@ Nos descargamos la imagen y veremos si tiene algún archivo oculto. Haremos el s
 steghide extract -sf imagen.jpeg
 ```
 
-![Img](Pasted%20image%2020240917193813.png)
+![Img](./images/Pasted%20image%2020240917193813.png)
 
 
 ```
