@@ -74,7 +74,7 @@ cat secreto.txt
 ![Img](./images/5.png)
 
 
-Lo cual nos da una pista. Buscaremos  más información dentro de esta imagen como son los metadatos , usaremos `exiftool`, por lo cual usando el comando 
+Nos da una pista. Buscaremos más información dentro de esta imagen como son los metadatos , usaremos `exiftool`, por lo cual usando el comando 
 
 ```
 exiftool imagen.jpeg
@@ -95,6 +95,7 @@ hydra -l borazuwarah -P /usr/share/wordlists/rockyou.txt ssh://172.17.0.2
 ```
 ssh borazuwarah@172.17.0.2
 ```
+
 ![Img](./images/8.png)
 
 
