@@ -1,5 +1,5 @@
 
-**Autor:** [BorazuwarahCTF
+**Autor:** BorazuwarahCTF
 
 **Dificultad:** Muy Fácil
 
