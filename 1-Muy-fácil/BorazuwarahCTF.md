@@ -1,5 +1,5 @@
 
-**Autor:** [BorazuwarahCTF](https://github.com/borazuwarah/)
+**Autor:** [BorazuwarahCTF
 
 **Dificultad:** Muy Fácil
 
@@ -13,7 +13,7 @@ bash auto_deploy.sh borazuwarahctf.tar
 ```
 
 
-![Img](./images/Pasted%20image%2020241106191136.png)
+![Img](/WriteUps/1%20Muy_fácil/Pasted%20image%2020241106191136.png)
 
 
 
