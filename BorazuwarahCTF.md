@@ -47,7 +47,7 @@ nmap -p- -sS -sV -sC --min-rate 5000 -n -vvv -Pn 172.17.0.2
 `-Pn` ⮞ ignora si esta activa o no la IP  
 `-oG` ⮞ exportamos el resultado en formato grepeable (para extraer mejor los datos con herramientas como grep, awk)
 
-![1](./images/Pasted%20image%2020240917192325.png]
+![IMK](./images/Pasted%20image%2020240917192325.png]
 
 Nos vamos a la página web y nos sale :
 ![Img](./images/Pasted%20image%2020240917193213.png]
