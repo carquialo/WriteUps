@@ -13,7 +13,7 @@ bash auto_deploy.sh borazuwarahctf.tar
 ```
 
 
-![Img](1.png)
+![Img](./images/1.png)
 
 
 
