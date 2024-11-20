@@ -13,7 +13,7 @@ bash auto_deploy.sh borazuwarahctf.tar
 ```
 
 
-![[Pasted image 20241106191136.png]]
+![Img](Pasted%20image%2020241106191136.png)
 
 
 
