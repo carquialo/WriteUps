@@ -6,7 +6,7 @@ DESPLIEGUE
 sudo bash auto_deploy.sh breakmyssh.tar
 ```
 
-![[Pasted image 20240915033045.png]]
+
 
 --------------------
 PROCEDIMIENTO
@@ -25,6 +25,7 @@ nmap -p- -sS -sV -sC --min-rate 5000 -n -vvv -Pn 172.17.0.2
 Tenemos el puerto 22, SSH.
 
 ![[Pasted image 20240915033401.png]]
+
 
 Como tenemos un puerto 22 vamos a usar hydra con el siguiente comando:
 
