@@ -101,4 +101,4 @@ ssh borazuwarah@172.17.0.2
 Y ya estamos adentro. 
 
 
-![](BLOG-GIT/images/Pasted%20image%2020241120182640.png)
+![](./images/Pasted%20image%2020241120182640.png)
