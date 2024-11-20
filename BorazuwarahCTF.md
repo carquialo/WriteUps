@@ -13,7 +13,7 @@ bash auto_deploy.sh borazuwarahctf.tar
 ```
 
 
-![Img](1.png)
+![Img](./images/1.png)
 
 
 
@@ -48,14 +48,14 @@ nmap -p- -sS -sV -sC --min-rate 5000 -n -vvv -Pn 172.17.0.2
 `-oG` ⮞ exportamos el resultado en formato grepeable (para extraer mejor los datos con herramientas como grep, awk)
 
 
-![Img](2.png)
+![Img](./images/2.png)
 
 
 
 Nos vamos a la página web y nos sale :
 
 
-![Img](3.png)
+![Img](./images/3.png)
 
 
 Nos descargamos la imagen y veremos si tiene algún archivo oculto. Haremos el siguiente comando:
@@ -64,14 +64,14 @@ Nos descargamos la imagen y veremos si tiene algún archivo oculto. Haremos el s
 steghide extract -sf imagen.jpeg
 ```
 
-![Img](./images/Pasted%20image%2020240917193813.png)
+![Img](BLOG-GIT/images/4.png)
 
 
 ```
 cat secreto.txt
 ```
 
-![Img](./images/Pasted%20image%2020240917193842.png)
+![Img](BLOG-GIT/images/5.png)
 
 
 Lo cual nos da una pista. Buscaremos  más información dentro de esta imagen como son los metadatos , usaremos `exiftool`, por lo cual usando el comando 
@@ -79,7 +79,7 @@ Lo cual nos da una pista. Buscaremos  más información dentro de esta imagen co
 ```
 exiftool imagen.jpeg
 ```
-![Img](./images/Pasted%20image%2020240917194039.png)
+![Img](BLOG-GIT/images/6.png)
 
 Y ahí tenemos un usuario `borazuwarah`
 
@@ -88,12 +88,12 @@ Ahora fuerza bruta.
 ```
 hydra -l borazuwarah -P /usr/share/wordlists/rockyou.txt ssh://172.17.0.2
 ```
-![Img](./images/Pasted%20image%2020240917194231.png)
+![Img](BLOG-GIT/images/7.png)
 
 ```
 ssh borazuwarah@172.17.0.2
 ```
-![Img](./images/Pasted%20image%2020240917194342.png)
+![Img](BLOG-GIT/images/8.png)
 
 
 Y ya estamos adentro. 
