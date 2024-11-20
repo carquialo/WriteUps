@@ -18,8 +18,6 @@ bash auto_deploy.sh borazuwarahctf.tar
 
 
 
-
-
 ------------------------
 PROCEDIMIENTO:
 
