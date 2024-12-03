@@ -16,7 +16,7 @@ DESPLIEGUE
 bash auto_deploy.sh pinguinazo.tar
 ```
 
-![](BLOG-GIT/images/Pasted%20image%2020241203142400.png)
+![](./images/Pasted%20image%2020241203142400.png)
 
 La ip es : 
 
@@ -55,13 +55,13 @@ nmap -p- -sS -sV -sC --min-rate 5000 -n -vvv -Pn 172.17.0.2
 
 Al realizar el scaneo vemos que tenemos un puerto, el 5000
 
-![](BLOG-GIT/images/Pasted%20image%2020241203142952.png)
+![](./images/Pasted%20image%2020241203142952.png)
 
 Un servicio que corre upnp 
 
 Miramos por el puerto 5000 y vemos lo siguiente : 
 
-![](BLOG-GIT/images/Pasted%20image%2020241203143725.png)
+![](./images/Pasted%20image%2020241203143725.png)
 
 Si metemos en PinguNombre lo siguiente: `<h1>"lo que quieras"</h1>`veremos que hay una vulnerabilidad. 
 
@@ -88,27 +88,27 @@ Y pondremos lo siguiente:
 
 Y ya tendríamos conexión. 
 
-![](BLOG-GIT/images/Pasted%20image%2020241203153421.png)
+![](./images/Pasted%20image%2020241203153421.png)
 
 Hacemos un tratamiento de la TTY.
 
 Y ya estaríamos más estable.
 
-![](BLOG-GIT/images/Pasted%20image%2020241203153641.png)
+![](./images/Pasted%20image%2020241203153641.png)
 
 Ponemos `sudo -l`
 
 Nos da el binario java, nos meteremos en la página de https://www.revshells.com/
 y pondremos nuestra IP atacante y el puerto 443. 
 
-![](BLOG-GIT/images/Pasted%20image%2020241203154155.png)
+![](./images/Pasted%20image%2020241203154155.png)
 
 Lo copiamos y creamos un archivo revshell.java
 
 Y pegamos lo antenior. 
 
 
-![](BLOG-GIT/images/Pasted%20image%2020241203154252.png)
+![](./images/Pasted%20image%2020241203154252.png)
 
 
 Vamos a compilarlo. 
@@ -121,8 +121,8 @@ Una vez compilado nos pondremos a la escucha con `nc` por el puerto que queramos
 
 Pondremos esto 
 
-![](BLOG-GIT/images/Pasted%20image%2020241203154804.png)
+![](./images/Pasted%20image%2020241203154804.png)
 
 
-![](BLOG-GIT/images/Pasted%20image%2020241203154738.png)
+![](./images/Pasted%20image%2020241203154738.png)
 Ya estamos como root. 
