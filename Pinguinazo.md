@@ -125,4 +125,5 @@ Pondremos esto
 
 
 ![](./images/Pasted%20image%2020241203154738.png)
+
 Ya estamos como root. 
